@@ -1,0 +1,21 @@
+@use 'src/styles/vars';
+
+.form {
+  margin-top: auto;
+  display: flex;
+
+  &-input {
+    flex-grow: 1;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.5em;
+    font-family: inherit;
+    height: 2em;
+    resize: none;
+  }
+
+  &-btn {
+    background-color: white;
+    border: 0;
+  }
+}

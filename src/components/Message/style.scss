@@ -1,0 +1,37 @@
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.message {
+  padding: 1rem;
+
+  &-author {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 10em;
+    position: relative;
+    animation: 0.4s cubic-bezier(.3,1.26,.69,1.13) 0s 1 pop;
+
+    &::before {    
+      content: "";
+      left: 1rem;
+      position: absolute;
+      top: -15px;
+      border-left: 15px solid transparent;
+      border-bottom: 15px solid white;
+    }
+  }
+}

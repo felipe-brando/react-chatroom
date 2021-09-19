@@ -1,0 +1,5 @@
+.messages {
+  flex-grow: 1;
+  overflow-y: scroll;
+  scroll-behavior: smooth; // propriété pour rendre le scroll progressif
+}

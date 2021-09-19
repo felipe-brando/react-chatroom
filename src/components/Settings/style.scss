@@ -1,0 +1,69 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.settings {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: 0.3s transform cubic-bezier(.35,1.61,.86,1.02);
+
+  &--hidden {
+    transform: translateX(calc(100% - 4em));
+
+    & .settings-toggler { // .settings--hidden .settings-toggler
+      transform: rotate(45deg);
+
+
+      &:hover {
+        transform: scale(1.2) rotate(45deg);
+      }
+    }
+  }
+
+  &-toggler {
+    border: 0;
+    background-color: white;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-right: 1rem;
+    transition: 0.3s transform cubic-bezier(.35,1.61,.86,1.02);
+
+    &:hover {
+      transform: scale(1.2) ;
+    }
+  }
+
+  &-form {
+    width: 14.5em;
+  }
+
+  &-input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 0;
+
+    &:focus {
+      outline: 2px solid #5300FF;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    background-color: #5300FF;
+    border: 0;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 3px;
+
+    &:focus, &:hover {
+      background-color: color.scale(#5300FF, $lightness: -20%);
+    }
+  }
+}
